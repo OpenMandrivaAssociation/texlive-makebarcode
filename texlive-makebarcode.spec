@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/makebarcode
+# catalog-date 2008-08-22 15:19:59 +0200
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-makebarcode
 Version:	1.0
 Release:	1
@@ -45,6 +51,7 @@ storage media.
 %doc %{_texmfdistdir}/doc/latex/makebarcode/README
 %doc %{_texmfdistdir}/doc/latex/makebarcode/makebarcode.pdf
 %doc %{_texmfdistdir}/doc/latex/makebarcode/makebarcode.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,3 +62,5 @@ storage media.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
