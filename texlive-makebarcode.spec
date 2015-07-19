@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-makebarcode
 Version:	1.0
-Release:	9
+Release:	10
 Summary:	Print various kinds 2/5 and Code 39 bar codes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/makebarcode
