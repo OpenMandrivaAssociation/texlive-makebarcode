@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/makebarcode
-# catalog-date 2008-08-22 15:19:59 +0200
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-makebarcode
-Version:	1.0
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Print various kinds 2/5 and Code 39 bar codes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/makebarcode
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makebarcode.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makebarcode.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makebarcode.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makebarcode.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ codes as well as bar codes for identification labels for HP
 storage media.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,24 +39,10 @@ storage media.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 753680
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718942
-- texlive-makebarcode
-- texlive-makebarcode
-- texlive-makebarcode
-- texlive-makebarcode
-
