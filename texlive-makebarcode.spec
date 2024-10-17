@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Print various kinds 2/5 and Code 39 bar codes
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/makebarcode
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/makebarcode
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makebarcode.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makebarcode.doc.r%{version}.tar.xz
